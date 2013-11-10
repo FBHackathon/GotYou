@@ -1,6 +1,6 @@
 // This function finds the list of categories and push them into the drop down
 // list
-$(document).ready(_init);
+/*$(document).ready(_init);
 
 function _init() {
   hide_all_tabs_but("home");
@@ -234,3 +234,4 @@ function _handle_post_button_click() {
     "post"
   );
 }
+*/
