@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Slideshow Effect 'Jump' Demo - Jssor Slider</title>
+</head>
+<body style="background:#fff;">
+    <!-- Caption Style -->
+    <style> 
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+        .bricon
+        {
+            background: url(../img/browser-icons.png);
+        }
+    </style>
+    <script>
+        //Buy Jssor Slider License
+        //$10 for Jssor Slider jQuery Plugin http://codecanyon.net/item/mobile-touch-swipe-jquery-plugin-jssor-slider/5245438?ref=jssor
+        //$10 for Jssor Slider No-jQuery Version http://codecanyon.net/item/mobile-touch-swipe-nojquery-jssor-slider/2797680?ref=jssor
+        //full javascript source code
+        //390+ caption transitions
+        //360+ slideshow transitions
+        //30+ professional themes + growing
+        //javascript compression tool
+        //license included
+        //free upgrades, free future versions
+        //free support
+    </script>
+    <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="../js/jssor.core.js"></script>
+    <script type="text/javascript" src="../js/jssor.utils.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+        var _SlideshowTransitions = [
+            //Jump in Straight
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 513, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Swirl
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in ZigZag
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Square
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationSquare, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Square with Chess
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationSquare, $Assembly: 260, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Rectangle
+            { $Duration: 1500, $Delay: 800, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Reverse: true, $Formation: $JssorSlideshowFormations$.$FormationRectangle, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Circle
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationCircle, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} },
+            //Jump in Rectangle Cross
+            { $Duration: 1500, $Delay: 50, $Cols: 8, $Rows: 4, $FlyDirection: 10, $Formation: $JssorSlideshowFormations$.$FormationRectangleCross, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseSwing, $Top: $JssorEasing$.$EaseInJump }, $ScaleVertical: 0.5, $Round: { $Top: 1.5} }
+        ];
+    </script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            $('#slider1_container').jssorSlider({
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $DirectionNavigatorOptions: {
+                    $Class: $JssorDirectionNavigator$,              //[Requried] Class to create direction navigator instance
+                    $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                },
+
+                $NavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $SpacingX: 10                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                },
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $DisableDrag: true                            //[Optional] Disable drag or not, default value is false
+                }
+            });
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+    <div id="slider1_container" class="slider1" style="position: relative; width: 600px;
+        height: 300px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+            overflow: hidden;">
+            <div>
+                <img u="image" src="../img/landscape/01.jpg" />
+                <div u="thumb">Thumbnail 1, any html here</div>
+            </div>
+            <div>
+                <img u="image" src="../img/landscape/02.jpg" />
+                <div u="thumb">Thumbnail 2, any html here</div>
+            </div>
+            <div>
+                <img u="image" src="../img/landscape/04.jpg" />
+                <div u="thumb">Thumbnail 3, any html here</div>
+            </div>
+            <div>
+                <img u="image" src="../img/landscape/05.jpg" />
+                <div u="thumb">Thumbnail 4, any html here</div>
+            </div>
+        </div>
+        
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="slider1-T" style="position: absolute; bottom: 0px; left: 0px; height:30px; width:600px;">
+            <div style="filter: alpha(opacity=50); opacity:0.5; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 30px; TOP: 0; LEFT: 0;">
+                    <ThumbnailTemplate style="POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 30px; font-size:16px; padding-left:10px;"></ThumbnailTemplate>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+
+        <!-- Navigator Skin Begin -->
+        <style>
+            .slider1-N div, .slider1-N div:hover, .slider1-N div.av
+            {
+                background: url(../img/sprite-14.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .slider1-N div { background-position: -10px -55px; }
+            .slider1-N div:hover, .slider1-N div.av:hover, .slider1-N div.hv { background-position: -40px -55px; }
+            .slider1-N div.av { background-position: -70px -55px; }
+            .slider1-N div.dn { background-position: -100px -55px; }
+        </style>
+        <div u="navigator" class="slider1-N" style="position: absolute; bottom: 9px; right: 11px;">
+            <div u="prototype" style="POSITION: absolute; WIDTH: 10px; HEIGHT: 10px;"></div>
+        </div>
+        <!-- Navigator Skin End -->
+
+        <!-- DirectionNavigator Skin Begin -->
+        <style>
+            .slider1-AL, .slider1-AR, .slider1-ALdn, .slider1-ARdn, .slider1-ALhv, .slider1-ARhv, .slider1-ALdn, .slider1-ARdn
+            {
+            	position: absolute;
+            	cursor: pointer;
+            	display: block;
+                background: url(../img/sprite-14.png) no-repeat;
+            }
+            .slider1-AL { background-position: 0px 0px; }
+            .slider1-AR { background-position: -40px 0px; }
+
+            .slider1-AL:hover, .slider1-ALhv { background-position: -70px 0px; }
+            .slider1-AR:hover, .slider1-ARhv { background-position: -110px 0px; }
+            
+            .slider1-ALdn { background-position: -140px 0px; }
+            .slider1-ARdn { background-position: -180px 0px; }
+            
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="slider1-AL" style="width: 30px; height: 50px; top: 130px; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="slider1-AR" style="width: 30px; height:50px; top: 130px; right: 0px">
+        </span>
+        <!-- DirectionNavigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+    </div>
+    <!-- Jssor Slider End -->
+</body>
+</html>

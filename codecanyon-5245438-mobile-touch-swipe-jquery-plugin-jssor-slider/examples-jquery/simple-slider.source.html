@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple Slider Example - Jssor Slider, Slideshow</title>
+</head>
+<body style="font-family:Arial, Verdana;background-color:#fff;">
+    <!-- Caption Style -->
+    <style> 
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+        .bricon
+        {
+            background: url(../img/browser-icons.png);
+        }
+    </style>
+    <script>
+        //Buy Jssor Slider License
+        //$10 for Jssor Slider jQuery Plugin http://codecanyon.net/item/mobile-touch-swipe-jquery-plugin-jssor-slider/5245438?ref=jssor
+        //$10 for Jssor Slider No-jQuery Version http://codecanyon.net/item/mobile-touch-swipe-nojquery-jssor-slider/2797680?ref=jssor
+        //full javascript source code
+        //390+ caption transitions
+        //360+ slideshow transitions
+        //30+ professional themes + growing
+        //javascript compression tool
+        //license included
+        //free upgrades, free future versions
+        //free support
+    </script>
+    <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="../js/jssor.core.js"></script>
+    <script type="text/javascript" src="../js/jssor.utils.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            $('#slider1_container').jssorSlider({
+                $DragOrientation: 3                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            });
+        });
+    </script>
+    <div id="slider1_container" class="slider1" style="position: relative; top: 0px; left: 0px; width: 600px;
+        height: 300px;">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+            overflow: hidden;">
+            <div><img u="image" src="../img/landscape/01.jpg" /></div>
+            <div><img u="image" src="../img/landscape/02.jpg" /></div>
+            <div><img u="image" src="../img/landscape/03.jpg" /></div>
+            <div><img u="image" src="../img/landscape/04.jpg" /></div>
+            <div><img u="image" src="../img/landscape/05.jpg" /></div>
+            <div><img u="image" src="../img/landscape/06.jpg" /></div>
+            <div><img u="image" src="../img/landscape/07.jpg" /></div>
+            <div><img u="image" src="../img/landscape/08.jpg" /></div>
+        </div>
+        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="gotyou.js"></script>
+  <link rel="stylesheet" type="text/css" href="gotyou.css" />
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+ <script src="http://code.jquery.com/jquery.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="slide_show.js"></script>
+
+    <script src="dist/js/bootstrap.min.js"></script>
+    </head>
+  
+    <body>
+      <div class="container">
+        
+        <div class="row" id="log-in">
+          <div class="col-md-12">
+            <fb:login-button show-faces="true" width="200" max-rows="1">Hellollllll</fb:login-button>
+            <div id="fb-root"></div>
+          </div>
+        </div><!--log in!-->
+
+      <h1>Album List</h1>    
+       <div class="row" id="album-list">
+         <div class="col-md-4">
+           <div id="search-friend" class="ui-widget">
+             <label for="tags">Insert your friend: </label>
+             <input id="tags" />
+           </div>
+
+           <div id="show-list">
+             
+           </div>
+
+         </div>
+         
+       <div class="col-md-8">
+           <div style="position: relative; margin-top: 10px; top: 0px; left:
+             0px; width:100%;border-bottom: 1px solid gray;
+             overflow: inherit;">
+               <div style="position: relative; top: 0px; left: 50%; width: 0px; height: 100%; text-align: center;">
+                   <!-- Jssor Slider Begin -->
+                   <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+                   <div id="slider2_container" class="slider2" style="position:
+                     relative; top: 0px; left: -400px; width: 940px; height: 640px; overflow: hidden;">
+                       
+                       <!-- Slides Container -->
+                       <div u="slides" id="main-insert-position" style="cursor:
+                         move; position: absolute; width: 640px; height: 640px; top: 0px;
+                           left: 100px; overflow: hidden;">
+<!--                           <div>
+                               <img u="image" src="img/home/01.jpg" />
+                               <div u=caption t="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:500px; height:30px;">
+                                   Does your client like mobile device touch swipe slider?
+                               </div>
+                               <div u=captiont="*" d="-300" style="position: absolute; left: 100px; top:160px; width:500px; height:90px; color:#fff; line-height: 30px; text-align: left;">
+                                   Jssor Slider is touch swipe image slideshow with<br />
+                                   360+ javascript slideshow transitions.<br />
+                               </div>
+                               <div u=caption t="*" d="-300" style="position: absolute; left: 20px; top:250px; width:500px; height:90px; color:#fff; line-height: 30px; text-align: left;">
+                                   When touch Jssor Slider,<br />
+                                   it will freeze and then move to the direction that finger swipes to.
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionOrange"  style="position:absolute; left:700px; top: 40px; width:130px; height:30px;">
+                                   All devices
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionBlack"  style="position:absolute; left:780px; top: 55px; width:100px; height:30px;">
+                                   supported
+                               </div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:525px;top:90px;width:220px;height:30px;font-size:28px; color:#fff;line-height:30px;">Windows Phone</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:560px;top:160px;width:120px;height:30px;font-size:28px; color:#fff;line-height:30px;">Android</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:760px;top:140px;width:60px;height:30px;font-size:28px; color:#fff;line-height:30px;">iOS</div>
+                               <img u="caption" t="*" d="-300" src="img/home/moc-iphone.png" style="position:absolute;left:600px;top:230px;width:120px;height:80px;" />
+                               <img u="caption" t="*" d="-300" src="img/home/moc-ipad.png" style="position:absolute;left:750px;top:220px;width:77px;height:100px;" />
+                           </div>
+                           <div>
+                               <img u="image" src="img/home/02.jpg" />
+                               <div u=captiont="*" class="captionOrange"  style="position:absolute; left:20px; top: 30px; width:500px; height:30px;">
+                                   Do you need transparent slider with content only?
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionBlack"  style="position:absolute; left:360px; top: 130px; width:60px; height:30px;">
+                                   comes
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionBlack"  style="position:absolute; left:360px; top: 180px; width:60px; height:30px;">
+                                   with
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionOrange"  style="position:absolute; left:560px; top: 110px; width:200px; height:120px; text-align: left;">
+                                   &nbsp; Banner Rotator<br />
+                                   &nbsp; Content Slider<br />
+                                   &nbsp; Image Gallery Slider<br />
+                                   &nbsp; Image Slider
+                               </div>
+                               <div u=caption t="*" d="-300" class="captionOrange"  style="position:absolute; left:20px; top: 310px; width:300px; height:30px;">
+                                   banner slider and tab slider ...
+                               </div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:400px;top:280px;width:90px;height:40px;font-size:36px; color:#fff;line-height:40px;">390+</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:540px;top:280px;width:210px;height:40px;font-size:36px; color:#fff;line-height:40px;">caption slide</div>
+                               <div u="caption" t="*" d="-300"style="position:absolute;left:790px;top:280px;width:180px;height:40px;font-size:36px; color:#fff;line-height:40px;">transitions</div>
+                           </div>
+                           <div>
+                               <img u="image" src="img/home/03.jpg" />
+                               <a u="caption"t="*" class="captionOrange" href="http://www.jssor.com/developement/tool-slideshow-transition-viewer.html" style="position: absolute; top: 300px; left: 630px; width: 250px; height: 30px;">360+ Slideshow Transitions</a>
+                               <div u=caption t="*" d="-300" class="captionOrange"  style="position:absolute; left:20px; top: 300px; width:500px; height:30px;">
+                                   Does random caption transition make sense?
+                               </div>
+                               <div u="caption" t="*" d="-300" class=captionBlack style="position: absolute; left:700px;top:120px;width:200px;height:90px;">
+                                   No-JQuery<br />
+                                   Independent<br />
+                                   Javascript Code
+                               </div>
+                               <div u="caption" t="*" d="-300" class=captionOrange style="position: absolute; top: 90px; left: 720px; width: 160px;
+                                   height: 90px;  line-height: 90px;">
+                                   Compress
+                               </div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:505px;top:40px;width:200px;height:30px;font-size:18px; color:#fff;line-height:30px;text-align:center;">Size&nbsp; &nbsp; &nbsp;CPU Usage</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:325px;top:90px;width:350px;height:30px;font-size:18px; color:#fff;line-height:30px;">Slider with Slideshow&nbsp; &nbsp; &nbsp; 23KB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~4%</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:325px;top:140px;width:350px;height:30px;font-size:18px; color:#fff;line-height:30px;">Slider with Caption&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18KB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~4%</div>
+                               <div u="caption" t="*" d="-300" style="position:absolute;left:325px;top:190px;width:350px;height:30px;font-size:18px; color:#fff;line-height:30px;">Slider&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;17KB&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~1%</div>
+                             </div>-->
+                       </div>
+                       <!-- Navigator Skin Begin -->
+                       <style>
+                           .slider2-N div, .slider2-N div:hover, .slider2-N div.av
+                           {
+                               background: url(img/sprite-20.png) no-repeat;
+                               overflow:hidden;
+                               cursor: pointer;
+                           }
+                           .slider2-N div { background-position: 0px -60px; }
+                           .slider2-N div:hover, .slider2-N div.av:hover, .slider2-N div.hv { background-position: -30px -60px; }
+                           .slider2-N div.av { background-position: -60px -60px; }
+                           .slider2-N div.dn { background-position: -90px -60px; }
+                           </style>
+                       <div u="navigator" class="slider2-N" style="position: absolute; bottom: 16px; right: 6px;">
+                           <div u="prototype" style="POSITION: absolute; WIDTH: 24px; HEIGHT: 24px; text-align:center; line-height:24px; color:White; font-size:14px;"><NumberTemplate></NumberTemplate></div>
+                       </div>
+                       <!-- Navigator Skin End -->
+                       
+                       <!-- DirectionNavigator Skin Begin -->
+                       <style>
+                           .slider2-AL, .slider2-AR, .slider2-ALdn, .slider2-ARdn, .slider2-ALhv, .slider2-ARhv
+                           {
+                               position: absolute;
+                               cursor: pointer;
+                               display: block;
+                               background: url(img/sprite-20.png) no-repeat;
+                               overflow:hidden;
+                           }
+                           .slider2-AL { background-position: 0px 0px; }
+                           .slider2-AR { background-position: -60px 0px; }
+                           .slider2-AL:hover, .slider2-ALhv { background-position: -120px 0px; }
+                           .slider2-AR:hover, .slider2-ARhv { background-position: -180px 0px; }
+                           .slider2-ALdn { background-position: -240px 0px; }
+                           .slider2-ARdn { background-position: -300px 0px; }
+                           </style>
+                       <!-- Arrow Left -->
+                       <span u="arrowleft" class="slider2-AL" style="width:
+                         55px; height: 55px; top: 162px; left: 8px;
+                         display:none">
+                       </span>
+                       <!-- Arrow Right -->
+                       <span u="arrowright" class="slider2-AR" style="width:
+                         55px; height: 55px; top: 162px; right: 100px; display:
+                         none">
+                       </span>
+                       <!-- DirectionNavigator Skin End -->
+                       <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+                   </div>
+                   <!-- Jssor Slider End -->
+               </div>
+           </div>
+       </div>
+     </div><!--End row for albun-list-->
+
+    <script>  
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '182280921963289', // App ID
+          channelUrl : '//http://cky.cs.illinois.edu/hackathon//channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+
+        // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+        // for any authentication related change, such as login, logout or session refresh. This means that
+        // whenever someone who was previously logged out tries to log in again, the correct case below 
+        // will be handled. 
+        FB.Event.subscribe('auth.authResponseChange', function(response) {
+          // Here we specify what we do with the response anytime this event occurs. 
+          if (response.status === 'connected') {
+           testAPI();
+            } else if (response.status === 'not_authorized') {
+              FB.login(function (response) {
+              }, { scope: "read_friendlists, friends_photos, user_photos" });  
+            } else {
+            FB.login(function (response) {
+              }, { scope: "read_friendlists, friends_photos, user_photos" });  
+
+          }
+        });
+      };
+
+      // Load the SDK asynchronously
+      (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+      }(document));
+
+      // Here we run a very simple test of the Graph API after login is successful. 
+      // This testAPI() function is only called in those cases. 
+      function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        getAccessToken(FB);
+        FB.api('/me', function(response) {
+          console.log('Good to see you, ' + response.name + '.');
+        });
+      }
+    </script>
+    </div>
+  </body>
+
+</html>
+
